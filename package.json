@@ -1,0 +1,22 @@
+{
+    "name": "mtt-jschess",
+    "version": "0.0.1",
+    "description": "yet another chess",
+    "private": true,
+    "author": {
+        "name": "Alexander Harchenko",
+        "email": "morontt@gmail.com",
+        "url": "https://morontt.info"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "grunt": "1.0.1",
+        "grunt-contrib-concat": "1.0.1",
+        "grunt-contrib-cssmin": "1.0.2",
+        "grunt-contrib-less": "1.4.0",
+        "grunt-contrib-uglify": "2.0.0",
+        "grunt-contrib-watch": "1.0.0",
+        "grunt-http-server": "2.0.0",
+        "normalize.css": "5.0.0"
+    }
+}
