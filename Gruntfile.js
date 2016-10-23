@@ -14,12 +14,12 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             css: {
-                files: "styles/src/*.less",
-                tasks: ["less", "concat:css", "cssmin"]
+                files: 'styles/src/*.less',
+                tasks: ['less', 'concat:css', 'cssmin']
             },
             js: {
-                files: "src/*.js",
-                tasks: ["concat:js", "uglify"]
+                files: 'src/*.js',
+                tasks: ['concat:js', 'uglify']
             },
             html: {
                 files: 'templates/*.hbs',
@@ -29,10 +29,10 @@ module.exports = function (grunt) {
         less: {
             development: {
                 options: {
-                    paths: ["styles/src/"]
+                    paths: ['styles/src/']
                 },
                 files: {
-                    "styles/css/app.css": "styles/src/app.less"
+                    'styles/css/app.css': 'styles/src/app.less'
                 }
             }
         },
@@ -41,7 +41,8 @@ module.exports = function (grunt) {
                 files: [{
                     src: 'templates/index.html.hbs',
                     dest: 'index.html'
-                }]
+                }],
+                templateData: 'templates/data.json'
             }
         },
         concat: {

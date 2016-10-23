@@ -9,7 +9,15 @@
     <link rel="stylesheet" href="/assets/mtt-jschess.min.css">
 </head>
 <body>
-    <p>Hello World!</p>
-    <script src="/assets/mtt-jschess.min.js"></script>
+<div class="board">
+{{#each rows as |row|}}
+    <div class="row">
+    {{#each ../cells as |cell|}}
+        <div class="cell" data-y="{{row}}" data-x="{{cell}}"></div>
+    {{/each}}
+    </div>
+{{/each}}
+</div>
+<script src="/assets/mtt-jschess.min.js"></script>
 </body>
 </html>
