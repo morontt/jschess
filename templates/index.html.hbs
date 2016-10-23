@@ -13,10 +13,16 @@
 {{#each rows as |row|}}
     <div class="row">
     {{#each ../cells as |cell|}}
-        <div class="cell" data-y="{{row}}" data-x="{{cell}}"></div>
+        <div id="f_{{row}}{{cell}}" class="cell"></div>
     {{/each}}
     </div>
 {{/each}}
+</div>
+<div hidden>
+    {{> pawn.svg color="w"}}
+    {{> pawn.svg color="b"}}
+    {{> rook.svg color="w"}}
+    {{> rook.svg color="b"}}
 </div>
 <script src="/assets/mtt-jschess.min.js"></script>
 </body>

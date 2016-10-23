@@ -22,7 +22,7 @@ module.exports = function (grunt) {
                 tasks: ['concat:js', 'uglify']
             },
             html: {
-                files: 'templates/*.hbs',
+                files: 'templates/**/*.hbs',
                 tasks: ['clean:html', 'compile-handlebars']
             }
         },
@@ -42,6 +42,7 @@ module.exports = function (grunt) {
                     src: 'templates/index.html.hbs',
                     dest: 'index.html'
                 }],
+                partials: 'templates/partials/*.hbs',
                 templateData: 'templates/data.json'
             }
         },
