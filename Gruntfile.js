@@ -7,6 +7,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-http-server');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-compile-handlebars');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -18,6 +20,10 @@ module.exports = function (grunt) {
             js: {
                 files: "src/*.js",
                 tasks: ["concat:js", "uglify"]
+            },
+            html: {
+                files: 'templates/*.hbs',
+                tasks: ['clean:html', 'compile-handlebars']
             }
         },
         less: {
@@ -28,6 +34,14 @@ module.exports = function (grunt) {
                 files: {
                     "styles/css/app.css": "styles/src/app.less"
                 }
+            }
+        },
+        'compile-handlebars': {
+            static: {
+                files: [{
+                    src: 'templates/index.html.hbs',
+                    dest: 'index.html'
+                }]
             }
         },
         concat: {
@@ -67,6 +81,9 @@ module.exports = function (grunt) {
                     'assets/<%= pkg.name %>.min.js': ['<%= concat.js.dest %>']
                 }
             }
+        },
+        clean: {
+            html: ['index.html']
         },
         'http-server': {
             'dev': {
