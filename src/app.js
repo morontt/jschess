@@ -21,4 +21,9 @@
     put_piece(el, 'b_rook');
     el = document.getElementById('f_77');
     put_piece(el, 'b_rook');
+
+    el = document.getElementById('f_03');
+    put_piece(el, 'w_queen');
+    el = document.getElementById('f_73');
+    put_piece(el, 'b_queen');
 })();

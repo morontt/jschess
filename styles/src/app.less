@@ -1,13 +1,15 @@
 @blackfield: #5D4032;
 @whitefield: #FEE6BA;
 
+@cellwidth: 5em;
+
 div {
     box-sizing: border-box;
 }
 
 .board {
     margin: auto;
-    width: ~"calc(40em + 21px)";
+    width: ~"calc(" @cellwidth * 8 ~" + 21px)";
     padding: 5px;
     .row {
         &:after {
@@ -17,8 +19,8 @@ div {
         }
         .cell {
             float: left;
-            height: 5em;
-            width: 5em;
+            height: @cellwidth;
+            width: @cellwidth;
             border: @blackfield solid 1px;
             margin: 0 1px 1px 0;
             svg {
