@@ -100,5 +100,6 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.registerTask('build', ['less', 'concat', 'uglify', 'cssmin', 'clean:html', 'compile-handlebars']);
     grunt.registerTask('default', ['http-server', 'watch']);
 };
