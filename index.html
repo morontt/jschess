@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSChess</title>
+    <link rel="stylesheet" href="assets/mtt-jschess.min.css">
+</head>
+<body>
+<div class="board">
+    <div class="row">
+        <div id="f_70" class="cell"></div>
+        <div id="f_71" class="cell"></div>
+        <div id="f_72" class="cell"></div>
+        <div id="f_73" class="cell"></div>
+        <div id="f_74" class="cell"></div>
+        <div id="f_75" class="cell"></div>
+        <div id="f_76" class="cell"></div>
+        <div id="f_77" class="cell"></div>
+    </div>
+    <div class="row">
+        <div id="f_60" class="cell"></div>
+        <div id="f_61" class="cell"></div>
+        <div id="f_62" class="cell"></div>
+        <div id="f_63" class="cell"></div>
+        <div id="f_64" class="cell"></div>
+        <div id="f_65" class="cell"></div>
+        <div id="f_66" class="cell"></div>
+        <div id="f_67" class="cell"></div>
+    </div>
+    <div class="row">
+        <div id="f_50" class="cell"></div>
+        <div id="f_51" class="cell"></div>
+        <div id="f_52" class="cell"></div>
+        <div id="f_53" class="cell"></div>
+        <div id="f_54" class="cell"></div>
+        <div id="f_55" class="cell"></div>
+        <div id="f_56" class="cell"></div>
+        <div id="f_57" class="cell"></div>
+    </div>
+    <div class="row">
+        <div id="f_40" class="cell"></div>
+        <div id="f_41" class="cell"></div>
+        <div id="f_42" class="cell"></div>
+        <div id="f_43" class="cell"></div>
+        <div id="f_44" class="cell"></div>
+        <div id="f_45" class="cell"></div>
+        <div id="f_46" class="cell"></div>
+        <div id="f_47" class="cell"></div>
+    </div>
+    <div class="row">
+        <div id="f_30" class="cell"></div>
+        <div id="f_31" class="cell"></div>
+        <div id="f_32" class="cell"></div>
+        <div id="f_33" class="cell"></div>
+        <div id="f_34" class="cell"></div>
+        <div id="f_35" class="cell"></div>
+        <div id="f_36" class="cell"></div>
+        <div id="f_37" class="cell"></div>
+    </div>
+    <div class="row">
+        <div id="f_20" class="cell"></div>
+        <div id="f_21" class="cell"></div>
+        <div id="f_22" class="cell"></div>
+        <div id="f_23" class="cell"></div>
+        <div id="f_24" class="cell"></div>
+        <div id="f_25" class="cell"></div>
+        <div id="f_26" class="cell"></div>
+        <div id="f_27" class="cell"></div>
+    </div>
+    <div class="row">
+        <div id="f_10" class="cell"></div>
+        <div id="f_11" class="cell"></div>
+        <div id="f_12" class="cell"></div>
+        <div id="f_13" class="cell"></div>
+        <div id="f_14" class="cell"></div>
+        <div id="f_15" class="cell"></div>
+        <div id="f_16" class="cell"></div>
+        <div id="f_17" class="cell"></div>
+    </div>
+    <div class="row">
+        <div id="f_00" class="cell"></div>
+        <div id="f_01" class="cell"></div>
+        <div id="f_02" class="cell"></div>
+        <div id="f_03" class="cell"></div>
+        <div id="f_04" class="cell"></div>
+        <div id="f_05" class="cell"></div>
+        <div id="f_06" class="cell"></div>
+        <div id="f_07" class="cell"></div>
+    </div>
+</div>
+<div hidden>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         id="w_pawn" class="wpiece"
+         width="100" height="100">
+        <polygon points="50,50 80,90 20,90"/>
+        <circle cx="50" cy="33" r="17"/>
+    </svg>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         id="b_pawn" class="bpiece"
+         width="100" height="100">
+        <polygon points="50,50 80,90 20,90"/>
+        <circle cx="50" cy="33" r="17"/>
+    </svg>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         id="w_rook" class="wpiece"
+         width="100" height="100">
+        <polygon points="20,90 20,75 30,75 35,40 20,37 20,10 32,10 32,22 44,22 44,10 56,10 56,22 68,22 68,10 80,10 80,37 65,40 70,75 80,75 80,90"/>
+    </svg>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         id="b_rook" class="bpiece"
+         width="100" height="100">
+        <polygon points="20,90 20,75 30,75 35,40 20,37 20,10 32,10 32,22 44,22 44,10 56,10 56,22 68,22 68,10 80,10 80,37 65,40 70,75 80,75 80,90"/>
+    </svg>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         id="w_queen" class="wpiece"
+         width="100" height="100">
+        <polygon points="20,90 20,75 30,75 33,55 25,53 10,20 31,40 31,15 43,35 50,7 57,35 69,15 69,40 90,20 75,53 67,55 70,75 80,75 80,90"/>
+        <circle cx="50" cy="10" r="5"/>
+        <circle cx="12" cy="24" r="5"/>
+        <circle cx="31" cy="15" r="5"/>
+        <circle cx="88" cy="24" r="5"/>
+        <circle cx="69" cy="15" r="5"/>
+    </svg>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         id="b_queen" class="bpiece"
+         width="100" height="100">
+        <polygon points="20,90 20,75 30,75 33,55 25,53 10,20 31,40 31,15 43,35 50,7 57,35 69,15 69,40 90,20 75,53 67,55 70,75 80,75 80,90"/>
+        <circle cx="50" cy="10" r="5"/>
+        <circle cx="12" cy="24" r="5"/>
+        <circle cx="31" cy="15" r="5"/>
+        <circle cx="88" cy="24" r="5"/>
+        <circle cx="69" cy="15" r="5"/>
+    </svg>
+</div>
+<script src="assets/mtt-jschess.min.js"></script>
+</body>
+</html>
