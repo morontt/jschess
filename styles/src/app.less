@@ -1,7 +1,11 @@
-@blackfield: #5D4032;
+@blackfield: #805845;
 @whitefield: #FEE6BA;
 
 @cellwidth: 5em;
+
+body {
+    background-color: #FAFAFA;
+}
 
 div {
     box-sizing: border-box;
@@ -61,6 +65,33 @@ div {
     &:hover {
         circle, polygon {
             fill: #555;
+        }
+    }
+}
+
+@media only screen and (max-device-width : 1024px) {
+    .board {
+        line-height: 0.7;
+        width: 100%;
+        padding: 0;
+        .row {
+            .cell {
+                margin: 0;
+                padding: 0;
+                height: auto;
+                width: 12.5%;
+                border: none;
+                &:before {
+                    content: '';
+                    float: left;
+                    padding-bottom: 100%;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
         }
     }
 }
